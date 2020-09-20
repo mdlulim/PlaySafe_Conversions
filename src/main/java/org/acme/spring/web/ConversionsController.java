@@ -44,4 +44,15 @@ public class ConversionsController {
 
          return convert;
      }
+
+     //Converting kilometers to miles
+     @POST
+     @Path("/conversions/ktom")
+     public Conversion ktom(Conversion kilometers) {
+         float miles = (float) (kilometers.getKilometers() / 1.609);
+         Conversion convert= new Conversion();
+         convert.setMiles(miles);
+
+         return convert;
+     }
 }
