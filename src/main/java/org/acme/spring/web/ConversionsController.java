@@ -22,4 +22,15 @@ public class ConversionsController {
 
         return convert;
     }
+
+     //Converting celsius to kelvin
+     @POST
+     @Path("/conversions/ctok")
+     public Conversion ctok(Conversion celsius) {
+         float kelvin = (float) (273.15 + celsius.getCelsius());
+         Conversion convert= new Conversion();
+         convert.setCelsius(kelvin);
+
+         return convert;
+     }
 }
