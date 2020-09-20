@@ -33,4 +33,15 @@ public class ConversionsController {
 
          return convert;
      }
+
+     //Converting miles to kilometers
+     @POST
+     @Path("/conversions/mtok")
+     public Conversion mtok(Conversion miles) {
+         float kilometers = (float) (miles.getMiles() / 0.62137);
+         Conversion convert= new Conversion();
+         convert.setKilometers(kilometers);
+
+         return convert;
+     }
 }
