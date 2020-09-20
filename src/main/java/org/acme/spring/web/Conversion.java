@@ -6,6 +6,7 @@ public class Conversion {
     private float miles;
     private float kilometers;
 
+    //Conversion get and set method
     public float getKelvin(){
         return kelvin;
     }
